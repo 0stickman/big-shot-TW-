@@ -22,7 +22,8 @@ html, body {
 }
 
 #spamton_main footer{
-  background-color: green;
+  background-color: rgb(26, 26, 26);
+  color: rgb(26, 26, 26);
 }
 
 #menu_react{
@@ -102,7 +103,11 @@ section {
 
 /* secțiunea ascunsă */
 #spamton_shop {
-  background: lightcoral;
+  background-image: url(imagini/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
 
   position: absolute;
   top: 0;     /* începe în afara ecranului */
@@ -132,6 +137,7 @@ section {
   overflow: hidden;
   display: flex;
   justify-content: space-evenly;
+  font-size: xx-large;
 }
 
 #shop_nav a{
@@ -148,6 +154,7 @@ section {
   padding: 1% 1%;
   border: none;
   cursor: pointer;
+  font-size: xx-large;
 }
 
 .dropdown a{
@@ -181,13 +188,26 @@ section {
   display: grid;
   overflow: auto;
   grid-template-columns: auto auto auto auto;
-  padding-top: 1%;
+  margin-left: 5%;
 }
 
 #shop_display .sell{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: red;
   border: 5px solid black;
-  height: fit-content;
-  width: fit-content;
+  height: 70%;
+  width: 90%;
+  margin-top: 20%;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.info .description{
+  font-size: larger;
 }
