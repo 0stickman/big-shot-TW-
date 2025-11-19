@@ -1,0 +1,193 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;           /* blochează scroll-ul */
+  scroll-behavior: smooth;    /* animație de tranziție */
+  font-family: sans-serif;
+}
+/*display-ul principal*/
+#spamton_menu{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: rgb(26, 26, 26);
+}
+
+#spamton_main header{
+  background-color: rgb(26, 26, 26);
+  text-align: center;
+  color:white;
+  font-size:xx-large;
+  padding-top: 1%;
+}
+
+#spamton_main footer{
+  background-color: green;
+}
+
+#menu_react{
+  display: grid;
+  grid-template-rows: 70% 30%;
+  color: white;
+  background-color: rgb(26, 26, 26);
+}
+
+/*
+aici o sa controlez ce imagine cu spamton este
+*/
+.money_man{
+  display: flex;
+  justify-content: flex-end;   
+  align-items: center;         
+  flex-direction: column;
+
+  height: 100%;
+  background-image: url(imagini/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    
+  justify-content: center;
+  align-items: center ;
+  flex-direction: column;
+
+  border: 5px solid white;
+}
+
+.money_man img{
+  
+  width: 40%;
+}
+
+
+#menu_react .dialog{
+  border: 5px solid white;
+  text-align: center;
+}
+
+#menu_nav{
+  /*layout*/
+  display: grid;
+  grid-template-rows: auto auto auto;
+  background-color: rgb(26, 26, 26);
+  border: 5px solid white;
+  padding-left: 5%;
+
+  /*text*/
+  align-items: center;
+  color: white;
+  font-size: 190%;
+}
+
+#menu_nav a{
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* secțiunea vizibilă */
+#spamton_main {
+  display: grid;
+  grid-template-rows: 10% 85% 5%;
+}
+
+#spamton_main:target {
+  left: 0;
+}
+
+/* secțiunea ascunsă */
+#spamton_shop {
+  background: lightcoral;
+
+  position: absolute;
+  top: 0;     /* începe în afara ecranului */
+  left: 100vw;
+  width: 100%;
+  transition: left 0.8s ease;   /* animație când devine target */
+}
+
+/* când devine target urcă în ecran */
+#spamton_shop:target {
+  left: 0;
+}
+
+#spamton_shop header{
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#shop_nav ul{
+  list-style-type: none;
+  background-color: gray;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 2%;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#shop_nav a{
+  color: white;
+  text-decoration: none;
+  padding: 2%;
+  display: block;
+  text-align: center;
+}
+
+.dropdown button{
+  background-color: gray;
+  color: white;
+  padding: 1% 1%;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown a{
+  display: block;
+  color: rgb(26, 26, 26);
+  padding: 1% 1%;
+}
+
+.dropdown .content{
+  display: none;
+  position: absolute;
+  background-color: rgb(31, 201, 201);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px black;
+}
+
+.dropdown:hover .content{
+  display: block;
+}
+
+.dropdown:hover button{
+  background-color: black;
+}
+
+.dropdown a:hover{
+  background-color: rgb(24, 160, 160);
+}
+
+#shop_display ul{
+  list-style-type: none;
+  display: grid;
+  overflow: auto;
+  grid-template-columns: auto auto auto auto;
+  padding-top: 1%;
+}
+
+#shop_display .sell{
+  display: block;
+  background-color: red;
+  border: 5px solid black;
+  height: fit-content;
+  width: fit-content;
+}
