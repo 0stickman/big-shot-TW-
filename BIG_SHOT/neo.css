@@ -85,6 +85,10 @@ aici o sa controlez ce imagine cu spamton este
   color: white;
 }
 
+#menu_nav #big:hover{
+  color: red;
+}
+
 section {
   width: 100%;
   height: 100vh;
